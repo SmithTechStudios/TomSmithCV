@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,126 +14,150 @@
   </script>
   <style>
     @media print {
-      html { color-scheme: light; }
-      html.dark { color-scheme: light; }
-      .no-print { display: none !important; }
+      html {
+        color-scheme: light;
+      }
+
+      html.dark {
+        color-scheme: light;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
       .print-light {
         background: white !important;
         color: #1f2937 !important;
         box-shadow: none !important;
       }
+
       .print-light * {
         color: inherit !important;
         border-color: #e5e7eb !important;
       }
+
       .print-light .text-emerald-600,
       .print-light .text-emerald-400,
       .print-light .text-emerald-700 {
         color: #059669 !important;
       }
+
       .print-light .border-emerald-500 {
         border-color: #10b981 !important;
       }
+
       .experience-card,
       .experience-group {
         break-inside: avoid;
         page-break-inside: avoid;
       }
+
       a[href^="http"]:after {
         content: " (" attr(href) ")";
         font-size: 0.75rem;
         color: #6b7280;
       }
+
       a[href^="http"].no-print-url:after {
         content: none;
       }
     }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 antialiased transition-colors duration-200 dark:bg-gray-950 dark:text-gray-100">
 
-  <button
-    id="theme-toggle"
-    type="button"
+  <button id="theme-toggle" type="button"
     class="no-print fixed top-4 right-4 z-50 rounded-full border border-gray-200 bg-white p-2.5 shadow-md hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-    aria-label="Toggle dark mode"
-    title="Toggle dark mode"
-  >
-    <svg id="icon-sun" class="h-5 w-5 text-amber-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-      <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+    aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg id="icon-sun" class="h-5 w-5 text-amber-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"
+      aria-hidden="true">
+      <path fill-rule="evenodd"
+        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+        clip-rule="evenodd" />
     </svg>
-    <svg id="icon-moon" class="h-5 w-5 text-gray-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+    <svg id="icon-moon" class="h-5 w-5 text-gray-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"
+      aria-hidden="true">
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
     </svg>
   </button>
 
   <main class="max-w-3xl mx-auto my-10 px-4 sm:px-6">
-    <div class="print-light rounded-lg bg-white p-8 shadow-md sm:p-10 dark:bg-gray-900 dark:shadow-gray-900/50 print:shadow-none print:rounded-none">
+    <div
+      class="print-light rounded-lg bg-white p-8 shadow-md sm:p-10 dark:bg-gray-900 dark:shadow-gray-900/50 print:shadow-none print:rounded-none">
 
       <header class="border-b-2 border-emerald-500 pb-6 mb-8">
         <div class="flex gap-5 sm:gap-6">
-          <img
-            src="assets/avatar.jpg"
-            alt="Tom Smith"
-            width="96"
-            height="96"
-            class="h-20 w-20 shrink-0 rounded-full object-cover ring-2 ring-emerald-500 sm:h-24 sm:w-24"
-          >
+          <img src="assets/avatar.jpg" alt="Tom Smith" width="96" height="96"
+            class="h-20 w-20 shrink-0 rounded-full object-cover ring-2 ring-emerald-500 sm:h-24 sm:w-24">
           <div class="min-w-0 flex-1">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Tom Smith</h1>
-              <p class="text-base font-semibold text-emerald-600 sm:text-lg dark:text-emerald-400">Staff Software Engineer</p>
+              <p class="text-base font-semibold text-emerald-600 sm:text-lg dark:text-emerald-400">Staff Software
+                Engineer</p>
             </div>
             <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600 dark:text-gray-400">
-          <span>
-            <strong class="text-gray-700 dark:text-gray-300">GitHub:</strong>
-            <a href="https://github.com/TomSmith27" target="_blank" rel="noopener noreferrer" class="no-print-url text-emerald-700 hover:underline dark:text-emerald-400">github.com/TomSmith27</a>
-          </span>
-          <span>
-            <strong class="text-gray-700 dark:text-gray-300">LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/tom-smith27/" target="_blank" rel="noopener noreferrer" class="no-print-url text-emerald-700 hover:underline dark:text-emerald-400">linkedin.com/in/tom-smith27</a>
-          </span>
+              <span>
+                <strong class="text-gray-700 dark:text-gray-300">GitHub:</strong>
+                <a href="https://github.com/TomSmith27" target="_blank" rel="noopener noreferrer"
+                  class="no-print-url text-emerald-700 hover:underline dark:text-emerald-400">github.com/TomSmith27</a>
+              </span>
+              <span>
+                <strong class="text-gray-700 dark:text-gray-300">LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/tom-smith27/" target="_blank" rel="noopener noreferrer"
+                  class="no-print-url text-emerald-700 hover:underline dark:text-emerald-400">linkedin.com/in/tom-smith27</a>
+              </span>
             </div>
           </div>
         </div>
       </header>
 
       <section class="mb-8">
-        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Core Competencies</h2>
+        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Key Skills
+          and Competencies</h2>
         <ul class="list-disc space-y-2 pl-5 text-gray-700 dark:text-gray-300">
-          <li>Fluent in C#, JavaScript and TypeScript with a passion for writing good quality, functional software.</li>
-          <li>Extensive experience working in agile Scrum environments, running scrums, and managing backlogs.</li>
-          <li>Strong track record of gathering client requirements and architecting patterns to provide a foundation for future applications.</li>
-          <li>Proven ability to write efficient SQL queries, manage tight deadlines, and communicate seamlessly across teams and stakeholders.</li>
+          <li>Fluent in C#, JavaScript and Typescript</li>
+          <li>Contributing to Open Source</li>
+          <li>Creating useful applications that help people</li>
+          <li>Passion for learning new technologies and investigating in free time.</li>
+          <li>Willingness to help others and share knowledge.</li>
+          <li>Experience gathering requirements from clients.</li>
+          <li>Ability to write efficient SQL queries</li>
+          <li>Ability to work to deadlines and cope under time pressure</li>
+          <li>Work well in a scrum team in an agile environment</li>
+          <li>Passion for writing good quality code and developing interesting, functional software</li>
+          <li>Good at communicating with customers, analysts and management</li>
+          <li>Experience writing unit and Automation tests.</li>
         </ul>
       </section>
 
-      <section class="mb-8" id="experience">
-        <h2 class="mb-5 text-xl font-bold text-gray-900 dark:text-white">Experience</h2>
+      <section class="mb-8" id="employment">
+        <h2 class="mb-5 text-xl font-bold text-gray-900 dark:text-white">Employment</h2>
 
         <div class="space-y-6">
 
           <!-- Egress -->
           <article class="experience-card flex gap-3 sm:gap-4">
             <div class="w-12 shrink-0 sm:w-14">
-              <img src="assets/logos/egress.png" alt="" width="56" height="56" class="h-12 w-12 rounded object-contain bg-white p-0.5 ring-1 ring-gray-200 sm:h-14 sm:w-14 dark:ring-gray-600">
+              <img src="assets/logos/egress.png" alt="" width="56" height="56"
+                class="h-12 w-12 rounded object-contain bg-white p-0.5 ring-1 ring-gray-200 sm:h-14 sm:w-14 dark:ring-gray-600">
             </div>
             <div class="min-w-0 flex-1 pb-1">
-              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Staff Software Engineer</h3>
+              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Staff Software Engineer
+              </h3>
               <p class="mt-0.5 text-sm leading-snug">
-                <a href="https://www.linkedin.com/company/egress-software/" target="_blank" rel="noopener noreferrer" class="font-semibold text-gray-900 hover:underline dark:text-white">Egress, a KnowBe4 company</a><span class="text-gray-500 dark:text-gray-400"> · Full-time</span>
+                <a href="https://www.linkedin.com/company/egress-software/" target="_blank" rel="noopener noreferrer"
+                  class="font-semibold text-gray-900 hover:underline dark:text-white">Egress</a>
               </p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">May 2024 – Present · 2 yrs</p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">Sheffield, England, United Kingdom</p>
+              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">May 2024 – Present</p>
               <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Egress provides intelligent email security for anti-phishing, data loss prevention, and encryption. As a Staff Software Engineer I work within an agile engineering team delivering platform capabilities and improvements for B2B security products.</p>
-                <ul class="space-y-2">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Delivering features and improvements for intelligent email security products as part of an agile engineering team.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Contributing to technical design, code reviews, and engineering standards at Staff Engineer level.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Building and maintaining backend and full-stack components using modern .NET and web technologies.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Collaborating with product and security stakeholders to ship reliable, observable services.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Mentoring engineers and helping raise code quality and delivery practices across the team.</span></li>
-                </ul>
+                <p>Helped bring to market a greenfield project using VueJs, .Net and a CQRS architecture.</p>
+                <p>Tech lead the front end development to ensure clean code and matching the Figma designs.</p>
+                <p>At the same time started the company wide Design System / Component library which is used by 50+
+                  developers aiming to perfectly match the Figma designs and meet the accessibility and engieering
+                  requiremsnts. During this time i setup the CI / CD pipeline with automatic versioning to ensure we
+                  could release multiple times a day if needed.</p>
               </div>
             </div>
           </article>
@@ -140,154 +165,105 @@
           <!-- Nimble Approach -->
           <article class="experience-card flex gap-3 sm:gap-4">
             <div class="w-12 shrink-0 sm:w-14">
-              <img src="assets/logos/nimble.png" alt="" width="56" height="56" class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
+              <img src="assets/logos/nimble.png" alt="" width="56" height="56"
+                class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
             </div>
             <div class="min-w-0 flex-1 pb-1">
-              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Senior Software Developer</h3>
+              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Senior Software Developer
+              </h3>
               <p class="mt-0.5 text-sm leading-snug">
-                <a href="https://www.linkedin.com/company/nimble-/" target="_blank" rel="noopener noreferrer" class="font-semibold text-gray-900 hover:underline dark:text-white">Nimble Approach</a><span class="text-gray-500 dark:text-gray-400"> · Full-time</span>
+                <span class="font-semibold text-gray-900 dark:text-white">Nimble Approach</span>
               </p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Oct 2022 – May 2024 · 1 yr 8 mos</p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">Sheffield, England, United Kingdom</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Technology consultancy delivering full stack solutions across multiple client engagements using .NET and React.</p>
-                <ul class="space-y-2">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Delivered full stack development services across a variety of clients using .NET and React.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Contributed new capabilities to a Next.js application serving tens of thousands of users, ensuring zero-downtime deployment.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Monitored application health and configured error tracking setups leveraging tools like Grafana.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Engineered a .NET microservice-based system tailored to reliably process asynchronous orders via a queue structure.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Collaborated closely with clients to guide architectural decisions and manage expectations within corporate guidelines.</span></li>
-                </ul>
+              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">October 2022 – Present</p>
+              <div class="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                <p>Worked for various different clients helping with full stack development in .NET and React. Helped
+                  add new features to a NextJs app that has tens of thousands of users making sure we had 0 downtime
+                  deployment as well as monitoring error tracking using tools like Grafana. I also worked on a .NET
+                  microservice based application which will process orders in a queue. During my time at Nimble I have
+                  also gained experience in working directly with clients to manage expectations and help guide
+                  architectural designs whilst also working within their guidelines</p>
               </div>
             </div>
           </article>
 
-          <!-- 3Squared (grouped roles) -->
-          <div class="experience-group experience-card flex gap-3 sm:gap-4">
-            <div class="relative flex w-12 shrink-0 flex-col items-center self-stretch sm:w-14">
-              <img src="assets/logos/3squared.png" alt="" width="56" height="56" class="relative z-10 h-12 w-12 shrink-0 rounded object-contain sm:h-14 sm:w-14">
-              <div class="pointer-events-none absolute bottom-0 left-1/2 top-12 w-0.5 -translate-x-1/2 bg-gray-300 sm:top-14 dark:bg-gray-600" aria-hidden="true"></div>
-            </div>
-            <div class="min-w-0 flex-1">
-              <div class="pb-6">
-                <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Senior Software Developer</h3>
-                <p class="mt-0.5 text-sm leading-snug">
-                  <a href="https://www.linkedin.com/company/3squared/" target="_blank" rel="noopener noreferrer" class="font-semibold text-gray-900 hover:underline dark:text-white">3Squared</a><span class="text-gray-500 dark:text-gray-400"> · Full-time</span>
-                </p>
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Jan 2021 – Oct 2022 · 1 yr 10 mos</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Sheffield, England, United Kingdom</p>
-                <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  <p>Rail and transport technology company. Technical lead on major initiatives including enterprise design systems and real-time operational software.</p>
-                  <ul class="space-y-2">
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Served as technical lead on three distinct major initiatives from inception to delivery, including an internal authentication library, a training engine, and a greenfield proof-of-concept system for the RSSB.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Spearheaded architectural shifts transitioning legacy ASP.NET WebForms over to modern single-page applications (SPA) using Vue.js and TypeScript.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Maintained the enterprise internal Design System/Style Guide as an internal npm package distributed business-wide.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Promoted standard coding conventions by authoring reusable NuGet packages targeted at solving redundant developer complexities.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Partnered on the HS2 infrastructure project to build a real-time yard management system utilizing SignalR.</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="pb-1">
-                <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Software Developer</h3>
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Nov 2018 – Jan 2021 · 2 yrs 3 mos</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Sheffield, England, United Kingdom</p>
-                <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  <p>Continued delivery on rail-sector products while helping modernise the engineering stack and internal tooling.</p>
-                  <ul class="space-y-2">
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Collaborated with many different teams to encourage an agile way of working, including running scrums and managing backlogs.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Helped promote best practices by creating internal NuGet packages that aim to solve common problems developers face across the company.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Created and maintained the internal Design System/Style Guide as an npm package used across the business.</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Squad Stats -->
+          <!-- 3Squared -->
           <article class="experience-card flex gap-3 sm:gap-4">
             <div class="w-12 shrink-0 sm:w-14">
-              <img src="assets/logos/squadstats.svg" alt="" width="56" height="56" class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
+              <img src="assets/logos/3squared.png" alt="" width="56" height="56"
+                class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
             </div>
             <div class="min-w-0 flex-1 pb-1">
-              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Owner &amp; Creator</h3>
+              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Senior Software Developer
+              </h3>
               <p class="mt-0.5 text-sm leading-snug">
-                <a href="https://squadstats.smithtech.dev/" target="_blank" rel="noopener noreferrer" class="font-semibold text-gray-900 hover:underline dark:text-white">Squad Stats</a><span class="text-gray-500 dark:text-gray-400"> · Self-employed</span>
+                <span class="font-semibold text-gray-900 dark:text-white">3Squared</span>
               </p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Sep 2020 – Present · 5 yrs+</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Side project building a Vue.js app to track local football team statistics with fair team-picking algorithms and league customisation.</p>
-                <p class="text-gray-500 dark:text-gray-400">
-                  <a href="https://squadstats.smithtech.dev/" target="_blank" rel="noopener noreferrer" class="hover:underline">squadstats.smithtech.dev</a>
-                </p>
-                <ul class="space-y-2">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Designed and launched a Vue.js web application to track local football team statistics, complete with analytical progress graphs.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Programmed a proprietary ranking algorithm to help local groups select balanced, fair line-ups for 5-a-side matches.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Engineered a shared internal package library housing a modular design system to standardize the look and feel across parallel projects.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Packaged and deployed Progressive Web Apps (PWAs) directly to the Android Store.</span></li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <!-- NoMoreBinDays -->
-          <article class="experience-card flex gap-3 sm:gap-4">
-            <div class="w-12 shrink-0 sm:w-14">
-              <img src="assets/logos/nomorebindays.svg" alt="" width="56" height="56" class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
-            </div>
-            <div class="min-w-0 flex-1 pb-1">
-              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Co-owner &amp; Developer</h3>
-              <p class="mt-0.5 text-sm leading-snug">
-                <a href="https://nomorebindays.co.uk/" target="_blank" rel="noopener noreferrer" class="font-semibold text-gray-900 hover:underline dark:text-white">NoMoreBinDays</a><span class="text-gray-500 dark:text-gray-400"> · Self-employed</span>
-              </p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Feb 2020 – Present · 5 yrs+</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Community resource co-created during lockdown to help people find where to recycle items not accepted in household bins.</p>
-                <p class="text-gray-500 dark:text-gray-400">
-                  <a href="https://nomorebindays.co.uk/" target="_blank" rel="noopener noreferrer" class="hover:underline">nomorebindays.co.uk</a>
-                </p>
-                <ul class="space-y-2">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Co-created a public-facing resource mapping out localized recycling facilities for items excluded from household collection bins.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Operated as the solo full stack developer, handling end-to-end configuration including GitHub Actions, Firebase hosting, and responsive layouts.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Implemented underlying data architecture utilizing modern NoSQL cloud databases.</span></li>
-                </ul>
-              </div>
+              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">November 2018 – Present</p>
+              <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Responsible
+                    for tech leading 3 different projects from inception to delivery, including an in-house
+                    authentication library, a training tool and a greenfield project as a proof of concept for the
+                    RSSB.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Lead the
+                    decision making in deciding how to move from legacy ASP.NET Webforms applications to modern SPA
+                    applications using VueJS and Typescript.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Create and
+                    maintain the internal Design System/Style Guide as an npm package that is used across the whole
+                    business in many different projects.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Help
+                    promote best practices by creating many internal nuget packages that aim to solve a lot of common
+                    problems developers face across the company.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Collaborate
+                    with many different teams to encourage an agile way of working, including running scrums and
+                    managing backlogs.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Worked on
+                    the HS2 project to create a realtime application to manage many moving parts in a yard, making heavy
+                    use of SignalR.</span></li>
+              </ul>
             </div>
           </article>
 
           <!-- SEAMS (grouped roles) -->
           <div class="experience-group experience-card flex gap-3 sm:gap-4">
             <div class="relative flex w-12 shrink-0 flex-col items-center self-stretch sm:w-14">
-              <img src="assets/logos/seams.svg" alt="" width="56" height="56" class="relative z-10 h-12 w-12 shrink-0 rounded object-contain sm:h-14 sm:w-14">
-              <div class="pointer-events-none absolute bottom-0 left-1/2 top-12 w-0.5 -translate-x-1/2 bg-gray-300 sm:top-14 dark:bg-gray-600" aria-hidden="true"></div>
+              <img src="assets/logos/seams.svg" alt="" width="56" height="56"
+                class="relative z-10 h-12 w-12 shrink-0 rounded object-contain sm:h-14 sm:w-14">
+              <div
+                class="pointer-events-none absolute bottom-0 left-1/2 top-12 w-0.5 -translate-x-1/2 bg-gray-300 sm:top-14 dark:bg-gray-600"
+                aria-hidden="true"></div>
             </div>
             <div class="min-w-0 flex-1">
               <div class="pb-6">
-                <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Senior Software Developer</h3>
+                <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Senior Software Developer
+                </h3>
                 <p class="mt-0.5 text-sm leading-snug">
-                  <span class="font-semibold text-gray-900 dark:text-white">SEAMS LTD</span><span class="text-gray-500 dark:text-gray-400"> · Full-time</span>
+                  <span class="font-semibold text-gray-900 dark:text-white">SEAMS LTD</span>
                 </p>
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Jul 2018 – Nov 2018 · 5 mos</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Sheffield, England, United Kingdom</p>
-                <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  <p>Short-term senior role leading new projects and guiding architectural direction for the development team.</p>
-                  <ul class="space-y-2">
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Led new initiatives and provided architectural direction to developers to foster solid foundational design practices.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Handled scope evaluation, project estimations, and structural deadlines for key business stakeholders.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Refactored legacy software components into modern builds using TypeScript, Vue.js, Webpack and Babel.</span></li>
-                  </ul>
-                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">July 2018 – November 2018</p>
+                <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
+                      aria-hidden="true">•</span><span>Responsible for leading new projects and providing guidance to
+                      other developers, as well as working with others to implement excellent software architecture and
+                      patterns to provide a foundation to build future applications.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
+                      aria-hidden="true">•</span><span>Organising and managing project deadlines including estimating
+                      large projects and providing realistic solutions to stakeholders.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
+                      aria-hidden="true">•</span><span>Converting an older web application to use modern technologies
+                      such as Typescript, VueJs, Webpack and Babel.</span></li>
+                </ul>
               </div>
               <div class="pb-1">
                 <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Software Developer</h3>
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Mar 2016 – Jul 2018 · 2 yrs 5 mos</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Sheffield, England, United Kingdom</p>
-                <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  <p>Expanded web engineering practices and delivered client-facing features on schedule.</p>
-                  <ul class="space-y-2">
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Elevated overall web engineering capabilities by infusing modern patterns focused on user experience (UX) and clean code.</span></li>
-                    <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Gathered strict client requirements to construct and ship reliable features on tight production schedules.</span></li>
-                  </ul>
-                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">March 2016 – July 2018</p>
+                <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
+                      aria-hidden="true">•</span><span>Responsible for increasing the web development capability of the
+                      team by introducing new techniques and patterns to improve the quality of the UX and general
+                      code.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Gathering
+                      requirements from clients to create the software they want in a timely manner.</span></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -295,21 +271,95 @@
           <!-- Tribal Group -->
           <article class="experience-card flex gap-3 sm:gap-4">
             <div class="w-12 shrink-0 sm:w-14">
-              <img src="assets/logos/tribal.png" alt="" width="56" height="56" class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
+              <img src="assets/logos/tribal.png" alt="" width="56" height="56"
+                class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
             </div>
             <div class="min-w-0 flex-1 pb-1">
               <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Software Developer</h3>
               <p class="mt-0.5 text-sm leading-snug">
-                <a href="https://www.linkedin.com/company/tribal/" target="_blank" rel="noopener noreferrer" class="font-semibold text-gray-900 hover:underline dark:text-white">Tribal Group</a><span class="text-gray-500 dark:text-gray-400"> · Full-time</span>
+                <span class="font-semibold text-gray-900 dark:text-white">Tribal Group</span>
               </p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Sep 2013 – Mar 2016 · 2 yrs 7 mos</p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">Sheffield, England, United Kingdom</p>
+              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">September 2013 – March 2016</p>
+              <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Responsible
+                    for creating configurable education software using ASP.NET and WPF for the tracking of student
+                    attendance and assessment results.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Creating
+                    responsive websites where teachers can mark students' attendance and add behaviour records on a
+                    range of mobile devices.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Maintaining
+                    one of the largest global education contracts for NSW, Australia which involve rapid development and
+                    finding quick solutions to address customer concerns.</span></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="mb-8" id="private-work">
+        <h2 class="mb-5 text-xl font-bold text-gray-900 dark:text-white">Entrepreneurship</h2>
+
+        <div class="space-y-6">
+
+          <!-- Squad Stats -->
+          <article class="experience-card flex gap-3 sm:gap-4">
+            <div class="w-12 shrink-0 sm:w-14">
+              <img src="assets/logos/squadstats.svg" alt="" width="56" height="56"
+                class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
+            </div>
+            <div class="min-w-0 flex-1 pb-1">
+              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Owner</h3>
+              <p class="mt-0.5 text-sm leading-snug">
+                <span class="font-semibold text-gray-900 dark:text-white">Squad Stats</span>
+              </p>
+              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <a href="https://squadstats.smithtech.dev/" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline">https://squadstats.smithtech.dev/</a>
+              </p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">September 2020 – Present</p>
               <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Built configurable education software for student tracking, attendance, and assessment at scale including international contracts.</p>
-                <ul class="space-y-2">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Built configurable enterprise-level education platforms using ASP.NET and WPF for student tracking and analytics.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Developed responsive mobile web touchpoints enabling teachers to input attendance metrics and behavioral entries.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Maintained high-value international education contracts for New South Wales (NSW), Australia, requiring rapid patch cycles.</span></li>
+                <p>Created a VueJS app which can track the statistics of local football teams. Has a ranking based
+                  algorithm to help football teams pick fair teams of their 5-a-side matches. Complete with graphs
+                  showing player progress and ways for league admins to customise their version of the site. Whilst
+                  working on this project I also created an internal package library to share across all my projects
+                  with a design system to give all apps a consistent feel. During this project I also learnt how to
+                  deploy Apps to the Android store by packaging Progressive Web Apps as Android Apps.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- NoMoreBinDays -->
+          <article class="experience-card flex gap-3 sm:gap-4">
+            <div class="w-12 shrink-0 sm:w-14">
+              <img src="assets/logos/nomorebindays.svg" alt="" width="56" height="56"
+                class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
+            </div>
+            <div class="min-w-0 flex-1 pb-1">
+              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Co-owner</h3>
+              <p class="mt-0.5 text-sm leading-snug">
+                <span class="font-semibold text-gray-900 dark:text-white">NoMoreBinDays</span>
+              </p>
+              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <a href="https://nomorebindays.co.uk/" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline">https://nomorebindays.co.uk/</a>
+              </p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">February 2020 – Present</p>
+              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                <p>During lockdown my wife and I created a website to help address the lack of information on where to
+                  recycle products that aren't accepted in our household bins. This was borne out of a desire to both
+                  give something back to the local community and challenge myself as a developer.</p>
+                <p>As the sole developer this was a great opportunity for me to create a full stack application outside
+                  of a working environment as I had to step outside my comfort zone and learn things such as:</p>
+                <ul class="space-y-2 pl-1">
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>GitHub
+                      Actions and deployments</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Hosting
+                      via Firebase</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Working
+                      with NoSQL databases</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Designing
+                      the software and considering responsive design</span></li>
                 </ul>
               </div>
             </div>
@@ -319,48 +369,73 @@
       </section>
 
       <section class="mb-8" id="skills">
-        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Technical Skills</h2>
+        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Skills
+        </h2>
         <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">C# / .NET Core</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">ASP.NET Core</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">JavaScript</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">TypeScript</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Vue.js</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">React</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Next.js</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Angular</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">SQL / NoSQL</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Entity Framework</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">SignalR</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Cypress</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">HTML5 / SASS</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Git / GitHub Actions</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Firebase</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Grafana / DevOps</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">C#
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">VueJS
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">.NET
+            Core</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
+            JavaScript</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
+            Typescript</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">ASP.NET
+            Core</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">React
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Angular
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Cypress
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">HTML
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">SASS
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">MVC
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">JQuery
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
+            Bootstrap</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
+            XML/JSON</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Entity
+            Framework</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Unit
+            &amp; Automation Testing</div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">SQL
+          </div>
+          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Git
+          </div>
         </div>
       </section>
 
       <section class="mb-8" id="education">
-        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Education</h2>
+        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Academic
+          Qualifications</h2>
         <div class="mb-5">
           <div class="flex flex-wrap items-baseline justify-between gap-2">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">University of Hull</h3>
             <span class="text-sm text-gray-500 dark:text-gray-400">September 2010 – June 2013</span>
           </div>
-          <p class="text-gray-600 italic dark:text-gray-400">BSc Computer Science with Games Development — 2:1</p>
+          <p class="text-gray-600 italic dark:text-gray-400">BSc Computer Science with Games Development (2:1)</p>
         </div>
         <div>
           <div class="flex flex-wrap items-baseline justify-between gap-2">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Guiseley School Sixth Form College</h3>
             <span class="text-sm text-gray-500 dark:text-gray-400">September 2008 – June 2010</span>
           </div>
-          <p class="text-gray-600 italic dark:text-gray-400">A-Levels: Maths (B), ICT (C), History (C)</p>
+          <p class="text-gray-600 italic dark:text-gray-400">Maths (B) ICT (C) History (C)</p>
         </div>
       </section>
 
       <section id="interests">
-        <h2 class="mb-3 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Interests</h2>
-        <p class="text-gray-600 dark:text-gray-400">Squash, Board Gaming, Game Development, and Open Source Web Development.</p>
+        <h2 class="mb-3 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Interests
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400">Squash, Board Gaming, Game Development, Web Development</p>
       </section>
 
     </div>
@@ -404,4 +479,5 @@
     })();
   </script>
 </body>
+
 </html>
