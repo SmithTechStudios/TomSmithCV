@@ -29,7 +29,7 @@ Update the **Egress** description and bullets with your real achievements when r
 ## Profile photo & logos
 
 - Profile photo: [`assets/avatar.jpg`](assets/avatar.jpg)
-- Company logos: [`assets/logos/`](assets/logos/) (`egress.png`, `nimble.png`, `3squared.png`, `tribal.png` from LinkedIn; SEAMS and side projects still use SVG placeholders)
+- Company logos: [`assets/logos/`](assets/logos/) (`egress.png`, `nimble.png`, `3squared.png`, `tribal.png`, `squadstats.png`, `nomorebindays.png`; SEAMS still uses SVG placeholder)
 
 Replace any image file to update the CV; keep the same filename or update the matching `<img src="...">` in `index.html`.
 
