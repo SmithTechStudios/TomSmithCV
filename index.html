@@ -68,22 +68,34 @@
 
 <body class="bg-gray-50 text-gray-800 antialiased transition-colors duration-200 dark:bg-gray-950 dark:text-gray-100">
 
-  <button id="theme-toggle" type="button"
-    class="no-print fixed top-4 right-4 z-50 rounded-full border border-gray-200 bg-white p-2.5 shadow-md hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-    aria-label="Toggle dark mode" title="Toggle dark mode">
-    <svg id="icon-sun" class="h-5 w-5 text-amber-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"
-      aria-hidden="true">
-      <path fill-rule="evenodd"
-        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-        clip-rule="evenodd" />
-    </svg>
-    <svg id="icon-moon" class="h-5 w-5 text-gray-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"
-      aria-hidden="true">
-      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-    </svg>
-  </button>
+  <div class="no-print fixed top-4 right-4 z-50 flex items-center gap-2">
+    <button id="download-pdf" type="button"
+      class="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-md hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+      title="Download PDF">
+      <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      <span class="hidden sm:inline">Download PDF</span>
+    </button>
+    <button id="theme-toggle" type="button"
+      class="rounded-full border border-gray-200 bg-white p-2.5 shadow-md hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg id="icon-sun" class="h-5 w-5 text-amber-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"
+        aria-hidden="true">
+        <path fill-rule="evenodd"
+          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          clip-rule="evenodd" />
+      </svg>
+      <svg id="icon-moon" class="h-5 w-5 text-gray-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"
+        aria-hidden="true">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+      </svg>
+    </button>
+  </div>
 
-  <main class="max-w-7xl mx-auto my-10 px-4 sm:px-6">
+  <main class="max-w-7xl mx-auto p-4">
     <div
       class="print-light rounded-lg bg-white p-8 shadow-md sm:p-10 dark:bg-gray-900 dark:shadow-gray-900/50 print:shadow-none print:rounded-none">
 
@@ -97,39 +109,151 @@
               <p class="text-base font-semibold text-emerald-600 sm:text-lg dark:text-emerald-400">Staff Software
                 Engineer</p>
             </div>
-            <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <span>
-                <strong class="text-gray-700 dark:text-gray-300">GitHub:</strong>
-                <a href="https://github.com/TomSmith27" target="_blank" rel="noopener noreferrer"
-                  class="no-print-url text-emerald-700 hover:underline dark:text-emerald-400">github.com/TomSmith27</a>
-              </span>
-              <span>
-                <strong class="text-gray-700 dark:text-gray-300">LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/tom-smith27/" target="_blank" rel="noopener noreferrer"
-                  class="no-print-url text-emerald-700 hover:underline dark:text-emerald-400">linkedin.com/in/tom-smith27</a>
-              </span>
+            <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              <a href="https://github.com/TomSmith27" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-gray-600 hover:text-emerald-700 dark:text-gray-400 dark:hover:text-emerald-400">
+                <svg class="h-4 w-4 shrink-0 print:hidden" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span class="font-medium text-gray-700 dark:text-gray-300">GitHub</span>
+                <span class="text-emerald-700 dark:text-emerald-400">github.com/TomSmith27</span>
+              </a>
+              <a href="https://www.linkedin.com/in/tom-smith27/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-gray-600 hover:text-emerald-700 dark:text-gray-400 dark:hover:text-emerald-400">
+                <svg class="h-4 w-4 shrink-0 print:hidden" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                <span class="font-medium text-gray-700 dark:text-gray-300">LinkedIn</span>
+                <span class="text-emerald-700 dark:text-emerald-400">linkedin.com/in/tom-smith27</span>
+              </a>
             </div>
           </div>
         </div>
       </header>
 
-      <section class="mb-8">
-        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Key Skills
-          and Competencies</h2>
-        <ul class="grid grid-cols-1 gap-x-8 gap-y-1.5 pl-5 text-sm leading-snug text-gray-700 sm:grid-cols-2 dark:text-gray-300 list-disc">
-          <li>Fluent in C#, JavaScript and Typescript</li>
-          <li>Contributing to Open Source</li>
-          <li>Creating useful applications that help people</li>
-          <li>Passion for learning new technologies and investigating in free time.</li>
-          <li>Willingness to help others and share knowledge.</li>
-          <li>Experience gathering requirements from clients.</li>
-          <li>Ability to write efficient SQL queries</li>
-          <li>Ability to work to deadlines and cope under time pressure</li>
-          <li>Work well in a scrum team in an agile environment</li>
-          <li>Passion for writing good quality code and developing interesting, functional software</li>
-          <li>Good at communicating with customers, analysts and management</li>
-          <li>Experience writing unit and Automation tests.</li>
-        </ul>
+      <section class="mb-8" id="summary">
+        <h2 class="mb-3 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+          Professional
+          Summary</h2>
+        <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">Hi, I’m Tom, a Sheffield-based Staff
+          Software Engineer with over 12 years of experience building full-stack software that works. My expertise lies
+          in the .NET and JavaScript (Vue/React) ecosystems, where I love bridging the gap between technical
+          architecture, engineering leadership, and product delivery. Whether I’m designing robust microservices,
+          building company-wide UI design systems used by dozens of developers, or mentoring teams to ship code faster,
+          I focus on pragmatic engineering that solves real-world problems. I bring that same end-to-end product mindset
+          to my corporate roles and my work as a local indie hacker.</p>
+      </section>
+
+      <section class="mb-8" id="skills">
+        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Core
+          Technical Skills</h2>
+        <div class="space-y-3">
+          <div>
+            <p class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Backend
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">C#</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">.NET
+                Core</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">ASP.NET
+                Core</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">CQRS</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Microservices</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Web
+                API</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">SignalR</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Entity
+                Framework</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">SQL
+                Server</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">NoSQL</span>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Frontend
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">TypeScript</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">JavaScript</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Vue.js</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">React</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Next.js</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Angular</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Webpack</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">SASS</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Tailwind
+                CSS</span>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">Testing
+              &amp; DevOps</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Cypress</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Unit
+                Testing</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Automation
+                Testing</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">CI/CD
+                Pipelines</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">GitHub
+                Actions</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Firebase</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Docker</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Grafana</span>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+              Methodologies</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Agile/Scrum</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Tech
+                Leadership</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Design
+                Systems</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Requirements
+                Gathering</span>
+              <span
+                class="border-l-2 border-emerald-500 bg-gray-50 px-2 py-0.5 text-xs font-medium dark:bg-gray-800">Architecture
+                Design</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="mb-8" id="employment">
@@ -152,14 +276,17 @@
                   class="text-gray-500 dark:text-gray-400"> · Full-time</span>
               </p>
               <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">May 2024 – Present · 2 yrs</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Helped bring to market a greenfield project using VueJs, .Net and a CQRS architecture.</p>
-                <p>Tech lead the front end development to ensure clean code and matching the Figma designs.</p>
-                <p>At the same time started the company wide Design System / Component library which is used by 50+
-                  developers aiming to perfectly match the Figma designs and meet the accessibility and engieering
-                  requiremsnts. During this time i setup the CI / CD pipeline with automatic versioning to ensure we
-                  could release multiple times a day if needed.</p>
-              </div>
+              <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Brought a
+                    greenfield enterprise application to market using Vue.js, .NET, and a CQRS architecture.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Led
+                    frontend development, focusing on clean code, accessibility, and matching Figma designs.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Started the
+                    company-wide Design System / component library now used by 50+ developers.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Set up
+                    CI/CD
+                    with automated versioning to support multiple production releases per day.</span></li>
+              </ul>
             </div>
           </article>
 
@@ -177,14 +304,18 @@
                   class="text-gray-500 dark:text-gray-400"> · Full-time</span>
               </p>
               <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Oct 2022 – May 2024 · 1 yr 8 mos</p>
-              <div class="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Worked for various different clients helping with full stack development in .NET and React. Helped
-                  add new features to a NextJs app that has tens of thousands of users making sure we had 0 downtime
-                  deployment as well as monitoring error tracking using tools like Grafana. I also worked on a .NET
-                  microservice based application which will process orders in a queue. During my time at Nimble I have
-                  also gained experience in working directly with clients to manage expectations and help guide
-                  architectural designs whilst also working within their guidelines</p>
-              </div>
+              <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Delivered
+                    full-stack solutions (.NET &amp; React) across multiple client consultancy projects.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Extended a
+                    Next.js app serving tens of thousands of users, with zero-downtime deployments and Grafana error
+                    monitoring.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Worked on a
+                    .NET microservices application that processes orders via a message queue.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Worked
+                    directly with clients to manage expectations and guide architectural decisions within their
+                    guidelines.</span></li>
+              </ul>
             </div>
           </article>
 
@@ -205,29 +336,17 @@
                 </p>
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Jan 2021 – Oct 2022 · 1 yr 10 mos</p>
                 <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
-                      aria-hidden="true">•</span><span>Responsible
-                      for tech leading 3 different projects from inception to delivery, including an in-house
-                      authentication library, a training tool and a greenfield project as a proof of concept for the
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Tech-led
+                      3 projects from inception to delivery, including an
+                      in-house authentication library, a training tool, and a greenfield proof of concept for the
                       RSSB.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Lead the
-                      decision making in deciding how to move from legacy ASP.NET Webforms applications to modern SPA
-                      applications using VueJS and Typescript.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Create
-                      and
-                      maintain the internal Design System/Style Guide as an npm package that is used across the whole
-                      business in many different projects.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Help
-                      promote best practices by creating many internal nuget packages that aim to solve a lot of common
-                      problems developers face across the company.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
-                      aria-hidden="true">•</span><span>Collaborate
-                      with many different teams to encourage an agile way of working, including running scrums and
-                      managing backlogs.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Led the
+                      move from legacy ASP.NET Webforms to modern SPAs using Vue.js and TypeScript.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Created
+                      and maintained an internal Design System as an npm package used across the business; built shared
+                      NuGet packages for common backend problems.</span></li>
                   <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Worked on
-                      the HS2 project to create a realtime application to manage many moving parts in a yard, making
-                      heavy
-                      use of SignalR.</span></li>
+                      the HS2 project, building a real-time yard management application using SignalR.</span></li>
                 </ul>
               </div>
               <div class="pb-1">
@@ -254,28 +373,26 @@
                 </p>
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Jul 2018 – Nov 2018 · 5 mos</p>
                 <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Led new
+                      projects and guided developers on architecture and patterns
+                      for future applications.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Managed
+                      project deadlines, estimates, and stakeholder expectations
+                      on large projects.</span></li>
                   <li class="flex gap-2"><span class="shrink-0 text-gray-400"
-                      aria-hidden="true">•</span><span>Responsible for leading new projects and providing guidance to
-                      other developers, as well as working with others to implement excellent software architecture and
-                      patterns to provide a foundation to build future applications.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
-                      aria-hidden="true">•</span><span>Organising and managing project deadlines including estimating
-                      large projects and providing realistic solutions to stakeholders.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
-                      aria-hidden="true">•</span><span>Converting an older web application to use modern technologies
-                      such as Typescript, VueJs, Webpack and Babel.</span></li>
+                      aria-hidden="true">•</span><span>Modernised a legacy web application using TypeScript, Vue.js,
+                      Webpack, and Babel.</span></li>
                 </ul>
               </div>
               <div class="pb-1">
                 <p class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Software Developer</p>
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Mar 2016 – Jul 2018 · 2 yrs 5 mos</p>
                 <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400"
-                      aria-hidden="true">•</span><span>Responsible for increasing the web development capability of the
-                      team by introducing new techniques and patterns to improve the quality of the UX and general
-                      code.</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Gathering
-                      requirements from clients to create the software they want in a timely manner.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Improved
+                      team web development capability by introducing new
+                      techniques and UX patterns.</span></li>
+                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Gathered
+                      client requirements and delivered software on time.</span></li>
                 </ul>
               </div>
             </div>
@@ -295,15 +412,15 @@
               </p>
               <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Sep 2013 – Mar 2016 · 2 yrs 7 mos</p>
               <ul class="mt-3 space-y-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Responsible
-                    for creating configurable education software using ASP.NET and WPF for the tracking of student
-                    attendance and assessment results.</span></li>
-                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Creating
-                    responsive websites where teachers can mark students' attendance and add behaviour records on a
-                    range of mobile devices.</span></li>
-                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Maintaining
-                    one of the largest global education contracts for NSW, Australia which involve rapid development and
-                    finding quick solutions to address customer concerns.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Built
+                    configurable education software in ASP.NET and WPF for tracking student attendance and
+                    assessment.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Created
+                    responsive websites for teachers to mark attendance and record behaviour on mobile devices.</span>
+                </li>
+                <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Maintained
+                    one of the largest global education contracts (NSW, Australia), delivering rapid fixes for customer
+                    concerns.</span></li>
               </ul>
             </div>
           </article>
@@ -314,7 +431,7 @@
       <section class="mb-8" id="private-work">
         <h2 class="mb-5 text-xl font-bold text-gray-900 dark:text-white">Entrepreneurship</h2>
 
-        <div class="space-y-6">
+        <div class="space-y-4">
 
           <!-- BG Quest -->
           <article class="experience-card flex gap-3 sm:gap-4">
@@ -323,17 +440,33 @@
                 class="h-12 w-12 rounded object-contain sm:h-14 sm:w-14">
             </div>
             <div class="min-w-0 flex-1 pb-1">
-              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">BG Quest</h3>
-              <p class="mt-0.5 text-sm font-semibold leading-snug text-gray-900 dark:text-white">Owner</p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Board Game Quest</h3>
+              <p
+                class="mt-0.5 flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                <span class="font-semibold text-gray-900 dark:text-white">Owner</span>
+                <span aria-hidden="true">·</span>
                 <a href="https://bgquest.app/" target="_blank" rel="noopener noreferrer"
-                  class="hover:underline">https://bgquest.app/</a>
+                  class="text-emerald-700 hover:underline dark:text-emerald-400">bgquest.app</a>
+                <span aria-hidden="true">·</span>
+                <span>2024 – Present · 2 yrs</span>
               </p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">2024 – Present · 2 yrs</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Board game companion app to track your collection, log plays, and connect with friends — built as a
-                  full-stack side project from the ground up.</p>
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">.NET
+                  Core</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">Vue.js</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">SQLite</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">Fly.io</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">Firebase</span>
               </div>
+              <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">Full-stack board game companion
+                to
+                track collections, log plays, and connect with friends. Built end-to-end as a side project from 2024 —
+                product, engineering, and deployment all outside my day job.</p>
             </div>
           </article>
 
@@ -345,15 +478,24 @@
             </div>
             <div class="min-w-0 flex-1 pb-1">
               <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Funday Sheffield</h3>
-              <p class="mt-0.5 text-sm font-semibold leading-snug text-gray-900 dark:text-white">Owner</p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              <p
+                class="mt-0.5 flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                <span class="font-semibold text-gray-900 dark:text-white">Owner</span>
+                <span aria-hidden="true">·</span>
                 <a href="https://fundaysheffield.com/" target="_blank" rel="noopener noreferrer"
-                  class="hover:underline">https://fundaysheffield.com/</a>
+                  class="text-emerald-700 hover:underline dark:text-emerald-400">fundaysheffield.com</a>
+                <span aria-hidden="true">·</span>
+                <span>2023 – Present · 3 yrs</span>
               </p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">2023 – Present · 3 yrs</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Local platform helping Sheffield families discover activities and playgroups in one place.</p>
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">Firebase</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">NoSQL</span>
               </div>
+              <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">Local platform helping Sheffield
+                families discover activities and playgroups in one place. Started in 2023 to make it easier for families
+                to find things to do locally.</p>
             </div>
           </article>
 
@@ -365,20 +507,29 @@
             </div>
             <div class="min-w-0 flex-1 pb-1">
               <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">Squad Stats</h3>
-              <p class="mt-0.5 text-sm font-semibold leading-snug text-gray-900 dark:text-white">Owner</p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              <p
+                class="mt-0.5 flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                <span class="font-semibold text-gray-900 dark:text-white">Owner</span>
+                <span aria-hidden="true">·</span>
                 <a href="https://squadstats.smithtech.dev/" target="_blank" rel="noopener noreferrer"
-                  class="hover:underline">https://squadstats.smithtech.dev/</a>
+                  class="text-emerald-700 hover:underline dark:text-emerald-400">squadstats.smithtech.dev</a>
+                <span aria-hidden="true">·</span>
+                <span>Sep 2020 – Present · 5 yrs 9 mos</span>
               </p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">Sep 2020 – Present · 5 yrs 9 mos</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>Created a VueJS app which can track the statistics of local football teams. Has a ranking based
-                  algorithm to help football teams pick fair teams of their 5-a-side matches. Complete with graphs
-                  showing player progress and ways for league admins to customise their version of the site. Whilst
-                  working on this project I also created an internal package library to share across all my projects
-                  with a design system to give all apps a consistent feel. During this project I also learnt how to
-                  deploy Apps to the Android store by packaging Progressive Web Apps as Android Apps.</p>
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">Vue.js</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">PWA</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">Google
+                  Play</span>
               </div>
+              <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">Vue.js sports stats platform with
+                a ranking algorithm for fair 5-a-side teams, progress graphs, and league admin customisation. Also built
+                a
+                shared package library and design system across my projects, and published to the Play Store via a PWA
+                wrapper.</p>
             </div>
           </article>
 
@@ -390,77 +541,30 @@
             </div>
             <div class="min-w-0 flex-1 pb-1">
               <h3 class="text-base font-semibold leading-snug text-gray-900 dark:text-white">NoMoreBinDays</h3>
-              <p class="mt-0.5 text-sm font-semibold leading-snug text-gray-900 dark:text-white">Co-owner</p>
-              <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              <p
+                class="mt-0.5 flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-sm leading-snug text-gray-500 dark:text-gray-400">
+                <span class="font-semibold text-gray-900 dark:text-white">Co-owner</span>
+                <span aria-hidden="true">·</span>
                 <a href="https://nomorebindays.co.uk/" target="_blank" rel="noopener noreferrer"
-                  class="hover:underline">https://nomorebindays.co.uk/</a>
+                  class="text-emerald-700 hover:underline dark:text-emerald-400">nomorebindays.co.uk</a>
+                <span aria-hidden="true">·</span>
+                <span>Feb 2020 – Present · 6 yrs 4 mos</span>
               </p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">Feb 2020 – Present · 6 yrs 4 mos</p>
-              <div class="mt-3 space-y-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                <p>During lockdown my wife and I created a website to help address the lack of information on where to
-                  recycle products that aren't accepted in our household bins. This was born out of a desire to both
-                  give something back to the local community and challenge myself as a developer.</p>
-                <p>As the sole developer this was a great opportunity for me to create a full stack application outside
-                  of a working environment as I had to step outside my comfort zone and learn things such as:</p>
-                <ul class="space-y-2 pl-1">
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>GitHub
-                      Actions and deployments</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Hosting
-                      via Firebase</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Working
-                      with NoSQL databases</span></li>
-                  <li class="flex gap-2"><span class="shrink-0 text-gray-400" aria-hidden="true">•</span><span>Designing
-                      the software and considering responsive design</span></li>
-                </ul>
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">Firebase</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">NoSQL</span>
+                <span
+                  class="border-l-2 border-emerald-400/80 bg-gray-50 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:border-emerald-600/60 dark:bg-gray-800 dark:text-gray-400">GitHub
+                  Actions</span>
               </div>
+              <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">Community recycling directory for
+                items that can't go in household bins. Started during lockdown with my wife; as sole developer I handled
+                GitHub Actions, Firebase hosting, NoSQL, and responsive design.</p>
             </div>
           </article>
 
-        </div>
-      </section>
-
-      <section class="mb-8" id="skills">
-        <h2 class="mb-4 text-xl font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Skills
-        </h2>
-        <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">C#
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">VueJS
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">.NET
-            Core</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
-            JavaScript</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
-            Typescript</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">ASP.NET
-            Core</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">React
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Angular
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Cypress
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">HTML
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">SASS
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">MVC
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">JQuery
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
-            Bootstrap</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">
-            XML/JSON</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Entity
-            Framework</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Unit
-            &amp; Automation Testing</div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">SQL
-          </div>
-          <div class="border-l-4 border-emerald-500 bg-gray-50 px-3 py-1.5 text-sm font-medium dark:bg-gray-800">Git
-          </div>
         </div>
       </section>
 
@@ -512,6 +616,10 @@
       toggle.addEventListener('click', function () {
         var isDark = root.classList.toggle('dark');
         localStorage.setItem(storageKey, isDark ? 'dark' : 'light');
+      });
+
+      document.getElementById('download-pdf').addEventListener('click', function () {
+        window.print();
       });
 
       init();

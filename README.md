@@ -12,13 +12,11 @@ Requires an internet connection on first load for the Tailwind CDN script.
 
 Use the sun/moon button (top-right). Your choice is saved in `localStorage` under `cv-theme`. On first visit, the page follows your system light/dark preference.
 
-## Print to PDF
+## Download / print to PDF
 
-1. Open `index.html` in Chrome or Edge.
-2. Press `Ctrl+P` (Print).
-3. Destination: **Save as PDF**.
-4. Enable **Background graphics** if you want accent colours in the PDF.
-5. The page forces a light layout when printing.
+Click **Download PDF** (top-right), or press `Ctrl+P`. Choose **Save as PDF** as the destination.
+
+Enable **Background graphics** if you want accent colours in the PDF. The page forces a light layout when printing and hides the toolbar buttons.
 
 ## Editing content
 
